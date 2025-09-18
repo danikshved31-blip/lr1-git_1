@@ -3,7 +3,11 @@ def fibonacci(n):
     for i in range(2, n * (n + 1) // 2):  # Достаточно для создания пирамиды
         fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
     return fib_sequence
-
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
 def print_fibonacci_pyramid(rows):
     fib_sequence = fibonacci(rows)
     index = 0
@@ -19,3 +23,4 @@ def print_fibonacci_pyramid(rows):
 # Укажите количество строк пирамиды
 rows = 16 # Указать свой номер в журнале
 print_fibonacci_pyramid(rows)
+print(f"Факториал числа {rows}: {factorial(rows)}")
